@@ -1,7 +1,18 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-const routes: Routes = [];
+import { WeatherReportComponent } from './weather-report/weather-report.component';
+
+const routes: Routes = [
+  {
+    path: '',
+    component: WeatherReportComponent
+  },
+  {
+    path: ':locationName',
+    component: WeatherReportComponent
+  }
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
